@@ -5,44 +5,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Vitalia Ventures - Productos naturales y esotéricos en Perú">
 <title>Vitalia Ventures</title>
-<style>
-body { font-family: Arial; margin:0; padding:0; background:#f9f9f9; }
-header, section, footer { padding: 40px; text-align:center; }
-header { background:#2c3e50; color:white; }
-section { margin:20px 0; background:white; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-button { padding:10px 20px; margin-top:10px; border:none; border-radius:5px; background:#27ae60; color:white; cursor:pointer; }
-button:hover { background:#2ecc71; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
+<nav class="menu">
+  <a href="#guia-prosperidad">Guía Gratis</a>
+  <a href="#pulsera">Pulsera</a>
+  <a href="#aceite">Aceite</a>
+  <a href="#producto3">Amuleto</a>
+</nav>
 <h1>Vitalia Ventures</h1>
 <p>Productos naturales y esotéricos en Perú</p>
 </header>
 
-<section id="guia-prosperidad">
+<main>
+<section id="guia-prosperidad" class="product">
 <h2>Guía de amuletos para la prosperidad</h2>
 <p>Descarga gratis nuestra guía rápida para atraer energía positiva y abundancia.</p>
 <a href="tools/guia-prosperidad.pdf" download><button>📥 Descargar PDF</button></a>
 </section>
 
-<section id="pulsera">
+<section id="pulsera" class="product">
 <h2>Pulsera de protección</h2>
+<img src="images/pulsera.jpg" alt="Pulsera de protección">
 <p>Protege tu energía y atrae prosperidad. Precio: S/50</p>
 <a href="https://wa.me/519XXXXXXXX"><button>🛒 Comprar vía WhatsApp</button></a>
 </section>
 
-<section id="aceite">
+<section id="aceite" class="product">
 <h2>Aceite energético de limpieza</h2>
+<img src="images/aceite.jpg" alt="Aceite energético">
 <p>Limpia tu espacio y tu aura. Precio: S/35</p>
 <a href="https://wa.me/519XXXXXXXX"><button>🛒 Comprar ahora</button></a>
 </section>
+
+<section id="producto3" class="product">
+<h2>Amuleto de abundancia</h2>
+<img src="images/producto3.jpg" alt="Amuleto de abundancia">
+<p>Atrae prosperidad y buena energía. Precio: S/60</p>
+<a href="https://wa.me/519XXXXXXXX"><button>🛒 Comprar ahora</button></a>
+</section>
+</main>
 
 <footer>
 <p>Síguenos en redes sociales</p>
 <p>&copy; 2026 Vitalia Ventures</p>
 </footer>
+
+<script>
+document.querySelectorAll('.menu a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
 
 </body>
 </html>
